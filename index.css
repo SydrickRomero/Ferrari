@@ -1,0 +1,423 @@
+/* Base Styles - Preserving Original Design */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(to bottom, black, transparent);
+  opacity: 0.7;
+  padding: 20px 60px;
+  color: white; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 90px; 
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.logo img {
+  height: 40px; 
+  object-fit: contain;
+}
+
+/* Burger Menu - Hidden by default */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.burger-menu.toggle span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-menu.toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.toggle span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  padding-bottom: 4px;
+}
+
+nav a.active, nav a:hover {
+  color: red;
+  font-weight: bold;
+}
+
+.banner {
+  background-image: url('image/black-ferrari.jpg');
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+.banner-content {
+  padding: 40px;
+  border-radius: 10px;
+  margin-right: 750px;
+}
+
+.banner h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: red;
+  margin-top: 70px;
+}
+
+.banner p {
+  font-size: 20px;
+  margin-bottom: 60px;
+  color: white;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 4px;
+  margin-top: 150px;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: darkred;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid red;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: red;
+}
+
+p {
+  font-size: 18px;
+}
+
+.logo a {
+  display: flex;
+  text-decoration: none;
+  font-family: cambria;
+  font-size: 35px;
+  font-weight: 600;
+  color: #f00;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  background: linear-gradient(to top, black, #656565);
+  color: #fff;
+  text-align: center;
+  padding: 1px 0;
+  font-size: 12px;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .social-icons {
+  margin-top: 5px;
+  transform: translateY(-10px);
+}
+
+footer .social-icons a {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Responsive Design */
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+ header {
+    padding: 15px 20px;
+    width: 100%;
+  }
+  
+  /* Show burger menu on mobile */
+  .burger-menu {
+    display: flex;
+  }
+  
+  /* Hide navigation by default on mobile */
+  nav {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.9));
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    transition: right 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Show navigation when active */
+  nav.nav-active {
+    right: 0;
+  }
+  
+  nav a {
+    margin: 15px 0;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 80%;
+  }
+  
+  .banner {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner-content {
+  margin-right: 0;
+  padding: 20px;
+  text-align: center;
+  max-width: 90%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(1px);        
+  -webkit-backdrop-filter: blur(1px); 
+  border-radius: 10px;                 
+}
+  
+  .banner h1 {
+    font-size: 35px;
+    margin-top: 0;
+  }
+  
+  .banner p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    margin-top: 30px;
+    font-size: 14px;
+    display: inline-block;
+  }
+  
+  footer .social-icons a {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+    width: 100%;
+  }
+  
+  /* Show burger menu on mobile */
+  .burger-menu {
+    display: flex;
+  }
+  
+  /* Hide navigation by default on mobile */
+  nav {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.9));
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    transition: right 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Show navigation when active */
+  nav.nav-active {
+    right: 0;
+  }
+  
+  nav a {
+    margin: 15px 0;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 80%;
+  }
+  
+  .banner {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner-content {
+  margin-right: 0;
+  padding: 20px;
+  text-align: center;
+  max-width: 90%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(1px);        
+  -webkit-backdrop-filter: blur(1px); 
+  border-radius: 10px;                 
+}
+
+  
+  .banner h1 {
+    font-size: 35px;
+    margin-top: 0;
+  }
+  
+  .banner p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    margin-top: 30px;
+    font-size: 14px;
+    display: inline-block;
+  }
+  
+  footer .social-icons a {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+  header {
+    padding: 10px 15px;
+    height: 70px;
+  }
+  
+  .logo img {
+    height: 30px;
+  }
+  
+  nav {
+    top: 70px;
+    height: calc(100vh - 70px);
+  }
+  
+  .banner h1 {
+    font-size: 28px;
+  }
+  
+  .banner p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    margin: 8px 3px;
+    font-size: 12px;
+    display: block;
+    width: 120px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .banner-content {
+    padding: 15px;
+  }
+  
+  footer {
+    font-size: 10px;
+  }
+  
+  footer .social-icons a {
+    font-size: 18px;
+    margin: 0 6px;
+  }
+}
+
+/* Landscape Mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .banner h1 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  .banner p {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    margin-top: 10px;
+    padding: 6px 12px;
+  }
+}

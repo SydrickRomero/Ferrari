@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="image/logo.png" type="image/png">
+  <title>About Us</title>
+  <link rel="stylesheet" href="about.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="image/logo.png" alt="Ferrari Logo">
+    </div>
+    
+    <!-- Burger Menu -->
+    <div class="burger-menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="models.html">Models</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <h1>About Ferrari</h1>
+    <p>Ferrari is an Italian luxury sports car manufacturer known for its high-performance vehicles, racing heritage, and iconic design and 
+      born for the spirit of racing, Ferrari epitomises the power of a lifelong passion and the beauty of limitless human achievement, creating timeless icons for a changing world</p>
+
+    <h1>Our Values</h1>
+    <p>Our talented individuals are our greatest resource. However, they can only pursue the extraordinary by working together as a team.
+      By fostering integrity, excellence and generosity, we give each of our people the possibility to express their own full potential - and be part of something greater.</p>
+    
+    <h2>Founder: Enzo Ferrari</h2>
+    <p>Enzo Ferrari was born on February 20, 1898, in Modena, Italy. Passionate about racing from a young age, he founded Scuderia Ferrari in 1929 as a racing team.
+       After working with Alfa Romeo, Enzo established Ferrari as an independent car manufacturer in 1939. Under his leadership, Ferrari became a symbol of speed, prestige, and innovation in motorsport and road car design.</p>
+    
+    <div class="founder-image">
+      <img src="image/enzo-ferrari.avif" alt="Enzo Ferrari" class="enzo-image">
+    </div>
+
+    <h3>Ferrari History & Milestones</h3>
+    <div class="history-timeline">
+      <div class="history-item">
+        <strong>1929:</strong> Enzo Ferrari establishes Scuderia Ferrari as a racing team.
+      </div>
+      <div class="history-item">
+        <strong>1939:</strong> Ferrari separates from Alfa Romeo and begins designing its first car.
+      </div>
+      <div class="history-item">
+        <strong>1947:</strong> The first Ferrari-branded car, the 125 S, is launched.
+      </div>
+      <div class="history-item">
+        <strong>1950:</strong> Ferrari debuts in Formula 1 — the start of its legendary racing legacy.
+      </div>
+      <div class="history-item">
+        <strong>1962:</strong> The iconic Ferrari 250 GTO is introduced.
+      </div>
+      <div class="history-item">
+        <strong>1988:</strong> Enzo Ferrari passes away at age 90, leaving behind an unmatched legacy.
+      </div>
+      <div class="history-item">
+        <strong>Today:</strong> Ferrari continues to lead in both Formula 1 and luxury performance cars worldwide.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ferrari. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      const burger = document.querySelector('.burger-menu');
+      nav.classList.toggle('nav-active');
+      burger.classList.toggle('toggle');
+    }
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('nav-menu');
+        const burger = document.querySelector('.burger-menu');
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const nav = document.getElementById('nav-menu');
+      const burger = document.querySelector('.burger-menu');
+      const header = document.querySelector('header');
+      
+      if (!header.contains(e.target)) {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+      }
+    });
+  </script>
+
+</body>
+</html>

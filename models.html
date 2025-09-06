@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="image/logo.png" type="image/png">
+  <title>Ferrari Models</title>
+  <link rel="stylesheet" href="models.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="image/logo.png" alt="Ferrari Logo">
+    </div>
+    
+    <!-- Burger Menu -->
+    <div class="burger-menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="models.html" class="active">Models</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="models-section">
+    <h1>Ferrari Models</h1>
+    <p>Explore the iconic Ferrari lineup</p>
+
+    <div class="model-grid">
+      <div class="model-card">
+        <img src="image/f40.jpg" alt="Ferrari F40">
+        <div class="card-content">
+          <h3>Ferrari F40</h3>
+          <p>Launched in 1987, it remains one of the most beloved Ferrari supercars.</p>
+          <ul class="specs">
+            <li>Engine: 2.9L Twin-Turbo V8</li>
+            <li>Horsepower: 471 hp</li>
+            <li>Top Speed: 324 km/h</li>
+            <li>0-100 km/h: 4.1s</li>
+          </ul>
+          <p class="price">Price: $400,000</p>
+          <a href="contact.html" class="btn">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="model-card">
+        <img src="image/Ferrari-SF90.jpg" alt="SF90 Stradale">
+        <div class="card-content">
+          <h3>Ferrari SF90 Stradale</h3>
+          <p>A hybrid supercar with 986 hp and cutting-edge technology.</p>
+          <ul class="specs">
+            <li>Engine: 4.0L Twin-Turbo V8 Hybrid</li>
+            <li>Horsepower: 986 hp</li>
+            <li>Top Speed: 340 km/h</li>
+            <li>0-100 km/h: 2.5s</li>
+          </ul>
+          <p class="price">Price: $625,000</p>
+          <a href="contact.html" class="btn">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="model-card">
+        <img src="image/bf12290d-ferrari-812.jpg" alt="Ferrari 812">
+        <div class="card-content">
+          <h3>Ferrari 812 GTS</h3>
+          <p>V12 powerhouse with breathtaking acceleration and control.</p>
+          <ul class="specs">
+            <li>Engine: 6.5L V12</li>
+            <li>Horsepower: 789 hp</li>
+            <li>Top Speed: 340 km/h</li>
+            <li>0-100 km/h: 3.0s</li>
+          </ul>
+          <p class="price">Price: $400,000</p>
+          <a href="contact.html" class="btn">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="model-card">
+        <img src="image/2007-ferrari-599.jpg" alt="Ferrari 599 GTB Fiorano">
+        <div class="card-content">
+          <h3>Ferrari 599 GTB Fiorano</h3>
+          <p>Launched in 2007, the 599 GTB Fiorano is a 2-door grand touring coupe with an all-aluminum body.</p>
+          <ul class="specs">
+            <li>Engine: 6.0-litre V12</li>
+            <li>Horsepower: 611 - 620 hp</li>
+            <li>Top Speed: 330 km/h</li>
+            <li>0-100 km/h: 3.7s</li>
+          </ul>
+          <p class="price">Price: $170,000</p>
+          <a href="contact.html" class="btn">Buy Now</a>
+        </div>
+      </div>
+  
+      <div class="model-card">
+        <img src="image/daytonasp3.jpg" alt="Ferrari Daytona SP3">
+        <div class="card-content">
+          <h3>Ferrari Daytona SP3</h3>
+          <p>Iconic design inspired from the 1960s Ferrari race cars.</p>
+          <ul class="specs">
+            <li>Engine: 6.5L V12</li>
+            <li>Horsepower: 829 hp</li>
+            <li>Top Speed: 340 km/h</li>
+            <li>0-100 km/h: 2.85s</li>
+          </ul>
+          <p class="price">Price: $2,250,000</p>
+          <a href="contact.html" class="btn">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="model-card">
+        <img src="image/ferrari-roma.jpg" alt="Ferrari Roma">
+        <div class="card-content">
+          <h3>Ferrari Roma</h3>
+          <p>1950s–1960s "La Nuova Dolce Vita" era of Rome — sleek, timeless lines.</p>
+          <ul class="specs">
+            <li>Engine: 3.9L Twin-Turbo V8</li>
+            <li>Horsepower: 612 hp</li>
+            <li>Top Speed: 320 km/h</li>
+            <li>0-100 km/h: 3.4s</li>
+          </ul>
+          <p class="price">Price: $220,000</p>
+          <a href="contact.html" class="btn">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ferrari. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      const burger = document.querySelector('.burger-menu');
+      nav.classList.toggle('nav-active');
+      burger.classList.toggle('toggle');
+    }
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('nav-menu');
+        const burger = document.querySelector('.burger-menu');
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const nav = document.getElementById('nav-menu');
+      const burger = document.querySelector('.burger-menu');
+      const header = document.querySelector('header');
+      
+      if (!header.contains(e.target)) {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+      }
+    });
+  </script>
+
+</body>
+</html>
